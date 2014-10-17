@@ -1,2 +1,2 @@
-# Ignore the main file
-main
+# Ignore the generated binary file
+termpass
