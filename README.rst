@@ -51,6 +51,9 @@ Install with homebrew::
     $ brew tap ravenac95/sudolikeaboss
     $ brew install sudolikeaboss
 
+*I may eventually add some docs on how to install without homebrew, but really
+you should just use homebrew*
+
 
 Configure iterm2 - so you can sudo, like a boss
 ***********************************************
