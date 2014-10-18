@@ -3,7 +3,7 @@ package onepass_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	. "github.com/ravenac95/termpass/onepass"
+	. "github.com/ravenac95/sudolikeaboss/onepass"
 )
 
 const SAMPLE_RESPONSE_0 = `
