@@ -58,7 +58,7 @@ Install from source
 *******************
 
 *I may eventually add some docs on how to install without homebrew, but really
-you should just use homebrew. Also, if you're on linux, this won't work.*
+you should just use homebrew.*
 
 
 Configure `iterm2`_ to use ``sudolikeaboss``
@@ -113,7 +113,7 @@ I use Windows
 *************
 
 Sorry? *But seriously, I am sorry but I have no plans to do this on Windows at
-this time*
+this time.*
 
 
 What's that weird icon on the top-right of the iterm2 window?
