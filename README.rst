@@ -67,6 +67,37 @@ To get `1password`_ to play ball, just make sure that any passwords you set use
 ``sudolikeaboss://local`` as the website on the 1password UI.
 
 
+.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/add-password.gif
+
+
+Gotchas
+-------
+
+Here are just some questions or gotchas that I figured people would run into or
+have.
+
+I don't use 1password
+*********************
+
+Are you serious?! If you're on a mac and you have passwords. You should be
+using 1password. With that said, I have thought about support other password
+managers but this project is super young.
+
+
+I use linux
+***********
+
+Sorry :(. I don't have anything for you yet
+
+
+What's that weird icon on the top-right of the iterm2 window?
+*************************************************************
+
+That's just an icon that indicates that an iterm2 coprocess is running. It will
+disappear eventually, as sudolikeaboss times out after 30 seconds when
+waiting for user input.
+
+
 Contributing/Developing
 -----------------------
 
