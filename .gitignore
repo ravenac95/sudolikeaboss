@@ -1,2 +1,5 @@
 # Ignore the generated binary file
 sudolikeaboss
+
+# Ignore some build things
+_build

@@ -41,7 +41,7 @@ Setup
 
 To setup `iterm2`_ is fairly simple. Just watch this gif!
 
-.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/demo.gif
+.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/setup.gif
 
 
 Getting passwords into `1password`_
