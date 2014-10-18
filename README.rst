@@ -27,6 +27,15 @@ Benefits
 - Greater convenience when accessing passwords
 
 
+So is this only for sudo passwords?
+-----------------------------------
+
+No! You can use this for tons of things! Like...
+
+- dm-crypt passwords on external boxes
+- gpg passwords to use on the terminal
+
+
 Setup
 -----
 
