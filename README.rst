@@ -36,8 +36,24 @@ No! You can use this for tons of things! Like...
 - gpg passwords to use on the terminal
 
 
-Setup
------
+Ok! I want it. How do I install this thing?!
+--------------------------------------------
+
+I tried to make installation as simple as possible. So here's the quickest path
+to awesomeness.
+
+
+Install the ``sudolikeaboss``
+*****************************
+
+Install with homebrew::
+
+    $ brew tap ravenac95/sudolikeaboss
+    $ brew install sudolikeaboss
+
+
+Configure iterm2 - so you can sudo, like a boss
+***********************************************
 
 To setup `iterm2`_ is fairly simple. Just watch this gif!
 
