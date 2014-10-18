@@ -57,7 +57,7 @@ Configure iterm2 - so you can sudo, like a boss
 
 To setup `iterm2`_ is fairly simple. Just watch this gif!
 
-.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/setup.gif
+.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/configuration.gif
 
 
 Getting passwords into `1password`_
