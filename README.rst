@@ -64,8 +64,8 @@ you should just use homebrew.*
 Configure `iterm2`_ to use ``sudolikeaboss``
 ********************************************
 
-Once that is complete you still need to configure `iterm2`_. This is fairly
-simple. Just watch this gif!
+After install ``sudolikeaboss`` you still need to configure `iterm2`_. This is
+fairly simple. Just watch this gif!
 
 .. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/configuration.gif
 
