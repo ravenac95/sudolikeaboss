@@ -106,14 +106,14 @@ managers as the project grows.
 I use linux
 ***********
 
-Sorry :(. I don't have anything for you yet. Maybe you can help me with that :)
+Sorry :( I don't have anything for you yet. Maybe you can help me with that :)
 
 
 I use Windows
 *************
 
-Sorry? *But seriously, I am sorry but I have no plans to do this on Windows at
-this time.*
+Sorry? *But seriously, I have no current plans to do this on Windows at this
+time.*
 
 
 What's that weird icon on the top-right of the iterm2 window?
