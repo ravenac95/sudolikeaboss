@@ -80,6 +80,25 @@ example:
 .. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/add-password.gif
 
 
+Potential Plans for the future!
+-------------------------------
+
+These are some ideas I have for the future. This isn't an exhaustive list, and,
+more importantly, I make no guarantees on weather or not I can or will get to
+any of these.
+
+- Ability to save passwords directly from the command line. Of any of these
+  plans, this is probably the most feasible. Again, no promises, but I
+  personally want this feature too
+- ``tmux`` support. So for those of you that don't use iterm2 I may be able to
+  create a different kind of plugin that can work with this.
+- linux support? This is a big question mark. If I can get tmux support to
+  work, then presumably doing something similar for linux wouldn't be
+  impossible. However, the other hard part of this is that linux doesn't
+  currently have a GUI for 1password, but I actually have plans to attempt to
+  create a gui using some already built tools
+
+
 Gotchas
 -------
 
@@ -112,8 +131,12 @@ Sorry :( I don't have anything for you yet. Maybe you can help me with that :)
 I use Windows
 *************
 
-Sorry? *But seriously, I have no current plans to do this on Windows at this
-time.*
+Unfortunately, I have no current plans to do this on Windows. This is mostly
+because I wouldn't know where to start. At the moment this software is pretty
+dependent on somethings like iterm2 and 1password. As my expertise is in
+Linux/Unix environments and not in Windows, I'm not exactly sure what
+tools/workflow someone in that camp would use. If you'd like to help out in
+this arena, I would be more than happy to give it all a shot.
 
 
 What's that weird icon on the top-right of the iterm2 window?
