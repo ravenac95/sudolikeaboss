@@ -99,8 +99,8 @@ I don't use 1password
 *********************
 
 Are you serious?! If you're on a mac and you have passwords, you should be
-using 1password. With that said, I have thought about supporting other password
-managers but this project is super young.
+using 1password. With that said, I would love to support additional password
+managers as the project grows. 
 
 
 I use linux
