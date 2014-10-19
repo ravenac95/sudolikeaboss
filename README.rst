@@ -48,6 +48,8 @@ to awesomeness.
 Install with homebrew
 *********************
 
+*This is by far the easiest method, and the one I recommend most.*
+
 ::
 
     $ brew tap ravenac95/sudolikeaboss
@@ -57,8 +59,38 @@ Install with homebrew
 Install from source
 *******************
 
-*I may eventually add some docs on how to install without homebrew, but really
-you should just use homebrew.*
+Assuming that you have Go installed and you know how to use it's associated
+tools...
+
+::
+    
+    $ go get github.com/ravenac95/sudolikeaboss
+
+The ``sudolikeaboss`` binary should now be in ``$GOPATH/bin/sudolikeaboss``
+
+
+Install from zip
+****************
+
+Download one of the following zips:
+
+- amd64: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.1.0_darwin_amd64.zip
+- 386: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.1.0_darwin_386.zip 
+
+.. warning::
+    At this time I'm not sure if the 386 version works. In theory it should,
+    but I don't have access to a 32-bit machine to test this.
+
+Then, unzip the file and copy it to the desired location for installation (I
+suggest ``/usr/local/bin/sudolikeaboss``).
+
+This entire workflow, would look like this::
+
+    $ mkdir sudolikeaboss
+    $ cd sudolikeaboss
+    $ wget http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.1.0_darwin_amd64.zip
+    $ unzip sudolikeaboss_0.1.0_darwin_amd64.zip
+    $ cp sudolikeaboss /usr/local/bin/sudolikeaboss
 
 
 Configure `iterm2`_ to use ``sudolikeaboss``
@@ -99,11 +131,18 @@ any of these.
   create a gui using some already built tools
 
 
-Gotchas
--------
+Gotchas/Known Issues
+--------------------
 
 Here are just some questions or gotchas that I figured people would run into or
 have.
+
+
+Is this compatible with 1password 5?
+************************************
+
+Not yet. I haven't upgraded to Yosemite yet. This should happen soon. Once it
+does I will make sure it works! (hopefully that's still possible)
 
 
 Why is the 1password popup not where I'm typing?
@@ -147,6 +186,12 @@ will disappear eventually, as ``sudolikeaboss`` times out after 30 seconds when
 waiting for user input.
 
 .. _coprocess: https://iterm2.com/coprocesses.html#/section/home
+
+
+Do you have this "undocumented API" documented somewhere?
+*********************************************************
+
+Not yet, but it will happen soon, hopefully.
 
 
 Contributing/Developing
