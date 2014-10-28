@@ -43,7 +43,7 @@ func LoadConfiguration() *onepass.Configuration {
 	}
 }
 
-func RunSudolikeaboss(configuration *onepass.Configuration, done chan bool) {
+func runSudolikeaboss(configuration *onepass.Configuration, done chan bool) {
 	// Load configuration from a file
 	client, err := onepass.NewClientWithConfig(configuration)
 
@@ -85,7 +85,7 @@ func runGetPassword() {
 		os.Exit(1)
 	}
 
-	go RunSudolikeaboss(configuration, done)
+	go runSudolikeaboss(configuration, done)
 
 	// Timeout if necessary
 	select {
