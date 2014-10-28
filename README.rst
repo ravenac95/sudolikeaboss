@@ -93,6 +93,8 @@ This entire workflow, would look like this::
     $ cp sudolikeaboss /usr/local/bin/sudolikeaboss
 
 
+.. _configure-iterm:
+
 Configure `iterm2`_ to use ``sudolikeaboss``
 ********************************************
 
@@ -100,6 +102,50 @@ After installing ``sudolikeaboss``, you still need to configure `iterm2`_. This
 is fairly simple. Just watch this gif!
 
 .. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/configuration.gif
+
+.. _onepass5:
+
+Installing the 1Password5 workaround
+************************************
+
+If you're using 1Password5, or you run into this screen:
+
+.. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/cannot-fill-item-error-popup.png
+
+Unfortunately, there's a bug with some versions of 1Password that prevents
+disabling the ``Verify browser code signature`` setting. This causes a problem
+for ``sudolikeaboss`` as it isn't a "trusted browser" per se. In order to fix
+this issue, a workaround has been created that uses Chrome (this means Chrome
+needs to be installed/running) to act as a proxy between ``sudolikeaboss`` and
+1Password.
+
+*At some point this workaround will be unnecessary, if you'd like to know when
+that is please follow me on twitter https://twitter.com/ravenac95 and I will
+make the announcement there*
+
+Then you need to install the workaround before continuing. Do this::
+    
+    $ brew install sudolikeaboss-workaround
+    $ sudolikeaboss-setup-workaround
+
+Next, stop Chrome **completely**, as in Command+Q, or entirely quit the
+application from the dock or application menu. Once it has shut down
+successfully, start it up again.
+
+The final step is to update the settings you made in the section "Configure
+`iterm2`_ to use ``sudolikeaboss``" above.  You need to ensure that the
+Coprocess is not::
+    
+    /usr/local/bin/sudolikeaboss
+
+but instead::
+    
+    SUDOLIKEABOSS_WEBSOCKET_URI="ws://127.0.0.1:16263/slab" /usr/local/bin/sudolikeaboss
+
+For more detailed information see:
+
+* https://github.com/ravenac95/sudolikeaboss/issues/1
+* https://discussions.agilebits.com/discussion/comment/151312
 
 
 Getting passwords into `1password`_
@@ -136,13 +182,6 @@ Gotchas/Known Issues
 
 Here are just some questions or gotchas that I figured people would run into or
 have.
-
-
-Is this compatible with 1password 5?
-************************************
-
-Not yet. I haven't upgraded to Yosemite yet. This should happen soon. Once it
-does I will make sure it works! (hopefully that's still possible)
 
 
 Why is the 1password popup not where I'm typing?
