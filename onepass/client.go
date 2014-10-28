@@ -91,7 +91,7 @@ func (client *OnePasswordClient) createCommand(action string, payload Payload) *
 		Action:   action,
 		Number:   client.number,
 		Version:  "4",
-		BundleId: "com.googlecode.iterm2",
+		BundleId: "com.sudolikeaboss.sudolikeaboss",
 		Payload:  payload,
 	}
 
@@ -105,7 +105,7 @@ func (client *OnePasswordClient) SendHelloCommand() (*Response, error) {
 	capabilities := make([]string, 0)
 
 	payload := Payload{
-		Version:      "0.0.1",
+		Version:      "4.2.4.90",
 		Capabilities: capabilities,
 	}
 

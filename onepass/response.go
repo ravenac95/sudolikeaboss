@@ -13,15 +13,21 @@ type Response struct {
 }
 
 type ResponsePayload struct {
-	Item ItemResponsePayload `json:"item"`
+	Item          ItemResponsePayload    `json:"item"`
+	Options       map[string]interface{} `json:"options"`
+	OpenInTabMode string                 `json:"openInTabMode"`
 }
 
 type ItemResponsePayload struct {
-	SecureContents SecureContents `json:"secureContents"`
+	Uuid           string                 `json:"uuid"`
+	NakedDomains   []string               `json:"nakedDomains"`
+	Overview       map[string]interface{} `json:"overview"`
+	SecureContents SecureContents         `json:"secureContents"`
 }
 
 type SecureContents struct {
-	Fields []map[string]string `json:"fields"`
+	HtmlForm map[string]interface{} `json:"htmlForm"`
+	Fields   []map[string]string    `json:"fields"`
 }
 
 func LoadResponse(rawResponseStr string) (*Response, error) {
