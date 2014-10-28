@@ -12,7 +12,7 @@ func main() {
 	app.Version = "0.2.0"
 	app.Usage = "use 1password from the terminal with ease"
 	app.Action = func(c *cli.Context) {
-		runGetPassword()
+		runSudolikeaboss()
 	}
 
 	app.Run(os.Args)
