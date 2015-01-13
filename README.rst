@@ -74,8 +74,8 @@ Install from zip
 
 Download one of the following zips:
 
-- amd64: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.1.0_darwin_amd64.zip
-- 386: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.1.0_darwin_386.zip 
+- amd64: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.2.0_darwin_amd64.zip
+- 386: http://dl.bintray.com/ravenac95/sudolikeaboss/sudolikeaboss_0.2.0_darwin_386.zip 
 
 .. warning::
     At this time I'm not sure if the 386 version works. In theory it should,
