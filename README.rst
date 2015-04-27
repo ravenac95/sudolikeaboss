@@ -162,7 +162,7 @@ Potential Plans for the future!
 -------------------------------
 
 These are some ideas I have for the future. This isn't an exhaustive list, and,
-more importantly, I make no guarantees on weather or not I can or will get to
+more importantly, I make no guarantees on whether or not I can or will get to
 any of these.
 
 - Ability to save passwords directly from the command line. Of any of these
