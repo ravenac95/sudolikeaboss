@@ -105,47 +105,21 @@ is fairly simple. Just watch this gif!
 
 .. _onepass5:
 
-Installing the 1Password5 workaround
-************************************
+Configuring 1Password5 to work with sudolikeaboss
+*************************************************
 
 If you're using 1Password5, or you run into this screen:
 
 .. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/cannot-fill-item-error-popup.png
 
-Unfortunately, there's a bug with some versions of 1Password that prevents
-disabling the ``Verify browser code signature`` setting. This causes a problem
-for ``sudolikeaboss`` as it isn't a "trusted browser" per se. In order to fix
-this issue, a workaround has been created that uses Chrome (this means Chrome
-needs to be installed/running) to act as a proxy between ``sudolikeaboss`` and
-1Password.
+This causes a problem for ``sudolikeaboss`` as it isn't a "trusted browser" per 
+se. In order to fix this issue, you need to change some preferences on your 
+1Password installation. Open up 1password's preferences and find the 
+``Advanced`` settings tab. Then make sure to uncheck the option 
+``Verify browser code signature``. After doing that, ``sudolikeaboss`` 
+should work... like a boss. For the visual learners here's a screenshot:
 
-*At some point this workaround will be unnecessary, if you'd like to know when
-that is please follow me on twitter https://twitter.com/ravenac95 and I will
-make the announcement there*
-
-Then you need to install the workaround before continuing. Do this::
-    
-    $ brew install sudolikeaboss-workaround
-    $ sudolikeaboss-setup-workaround
-
-Next, stop Chrome **completely**, as in Command+Q, or entirely quit the
-application from the dock or application menu. Once it has shut down
-successfully, start it up again.
-
-The final step is to update the settings you made in the section "Configure
-`iterm2`_ to use ``sudolikeaboss``" above.  You need to ensure that the
-Coprocess is not::
-    
-    /usr/local/bin/sudolikeaboss
-
-but instead::
-    
-    SUDOLIKEABOSS_WEBSOCKET_URI="ws://127.0.0.1:16263/slab" /usr/local/bin/sudolikeaboss
-
-For more detailed information see:
-
-* https://github.com/ravenac95/sudolikeaboss/issues/1
-* https://discussions.agilebits.com/discussion/comment/151312
+.. image:: https://cloud.githubusercontent.com/assets/889219/6270365/a69a0726-b816-11e4-9b96-558ddeb00378.png
 
 
 Getting passwords into `1password`_
