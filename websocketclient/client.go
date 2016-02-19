@@ -1,7 +1,7 @@
 package websocketclient
 
 import (
-	ws "code.google.com/p/go.net/websocket"
+	ws "golang.org/x/net/websocket"
 )
 
 type Codec interface {
