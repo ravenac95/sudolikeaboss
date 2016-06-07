@@ -16,7 +16,7 @@ StartApp(void) {
 import "C"
 
 import (
-	"github.com/codegangsta/cli"
+	"github.com/urfave/cli"
 	"os"
 )
 
