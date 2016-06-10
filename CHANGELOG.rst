@@ -1,10 +1,17 @@
 Changelog
 =========
 
+0.2.1 (2016-06-09)
+------------------
+
+* Issue #19
+
+    * Fixed compatibility with 1password 6.3
+
 0.2.0 (2014-10-28)
 ------------------
 
-* Issue #1 
+* Issue #1
 
     * _minor_: Allowed for more options to be set via environment variables
 
