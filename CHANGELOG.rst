@@ -1,6 +1,16 @@
 Changelog
 =========
 
+0.3.0 (Unreleased)
+------------------
+
+* Issue #29
+
+    * Fixes compatiblity with 1password 6.5
+        
+        * Communication between 1password helper and sudolikeaboss is now encrypted.
+
+
 0.2.1 (2016-06-09)
 ------------------
 
