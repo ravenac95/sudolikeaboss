@@ -13,9 +13,18 @@ type Response struct {
 }
 
 type ResponsePayload struct {
-	Item          ItemResponsePayload    `json:"item"`
-	Options       map[string]interface{} `json:"options"`
-	OpenInTabMode string                 `json:"openInTabMode"`
+	Item           ItemResponsePayload    `json:"item"`
+	Algorithm      string                 `json:"alg"`
+	Method         string                 `json:"method"`
+	Code           string                 `json:"code"`
+	Data           string                 `json:"data"`
+	Hmac           string                 `json:"hmac"`
+	Iv             string                 `json:"iv"`
+	M3             string                 `json:"m3"`
+	CS             string                 `json:"cs"`
+	AssociatedData string                 `json:"adata"`
+	Options        map[string]interface{} `json:"options"`
+	OpenInTabMode  string                 `json:"openInTabMode"`
 }
 
 type ItemResponsePayload struct {

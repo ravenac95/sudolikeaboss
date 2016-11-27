@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/ravenac95/sudolikeaboss/onepass"
 	"os"
+	"os/user"
+	"path"
 	"strconv"
 	"time"
+
+	log "github.com/Sirupsen/logrus"
+
+	"github.com/ravenac95/sudolikeaboss/onepass"
 )
 
 const DEFAULT_TIMEOUT_STRING_SECONDS = "30"
@@ -20,9 +25,9 @@ func LoadConfiguration() *onepass.Configuration {
 		defaultHost = DEFAULT_HOST
 	}
 
-	websocketUri := os.Getenv("SUDOLIKEABOSS_WEBSOCKET_URI")
-	if websocketUri == "" {
-		websocketUri = DEFAULT_WEBSOCKET_URI
+	websocketURI := os.Getenv("SUDOLIKEABOSS_WEBSOCKET_URI")
+	if websocketURI == "" {
+		websocketURI = DEFAULT_WEBSOCKET_URI
 	}
 
 	websocketProtocol := os.Getenv("SUDOLIKEABOSS_WEBSOCKET_PROTOCOL")
@@ -35,11 +40,21 @@ func LoadConfiguration() *onepass.Configuration {
 		websocketOrigin = DEFAULT_WEBSOCKET_ORIGIN
 	}
 
+	stateDirectory := os.Getenv("SUDOLIKEABOSS_STATE_DIRECTORY")
+	if stateDirectory == "" {
+		usr, err := user.Current()
+		if err != nil {
+			log.Fatal(err)
+		}
+		stateDirectory = path.Join(usr.HomeDir, ".sudolikeaboss")
+	}
+
 	return &onepass.Configuration{
-		WebsocketUri:      websocketUri,
+		WebsocketURI:      websocketURI,
 		WebsocketProtocol: websocketProtocol,
 		WebsocketOrigin:   websocketOrigin,
 		DefaultHost:       defaultHost,
+		StateDirectory:    stateDirectory,
 	}
 }
 
@@ -51,7 +66,7 @@ func retrievePasswordFromOnepassword(configuration *onepass.Configuration, done 
 		os.Exit(1)
 	}
 
-	response, err := client.SendHelloCommand()
+	response, err := client.Authenticate(false)
 
 	if err != nil {
 		os.Exit(1)
@@ -65,6 +80,26 @@ func retrievePasswordFromOnepassword(configuration *onepass.Configuration, done 
 
 	password, err := response.GetPassword()
 	fmt.Println(password)
+
+	done <- true
+}
+
+func registerWithOnepassword(configuration *onepass.Configuration, done chan bool) {
+	// Load configuration from a file
+	client, err := onepass.NewClientWithConfig(configuration)
+
+	if err != nil {
+		os.Exit(1)
+	}
+
+	_, err = client.Authenticate(true)
+
+	if err != nil {
+		os.Exit(1)
+	}
+
+	fmt.Println("")
+	fmt.Println("Congrats sudolikeaboss is registered!")
 
 	done <- true
 }
@@ -98,4 +133,23 @@ func runSudolikeaboss() {
 	}
 	// Close the app neatly
 	os.Exit(0)
+}
+
+func runSudolikeabossRegistration() {
+	done := make(chan bool)
+
+	configuration := LoadConfiguration()
+
+	go registerWithOnepassword(configuration, done)
+
+	// Timeout if necessary
+	select {
+	case <-done:
+		// Do nothing no need
+		close(done)
+		os.Exit(1)
+	}
+	// Close the app neatly
+	os.Exit(0)
+
 }
