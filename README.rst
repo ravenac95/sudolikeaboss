@@ -1,10 +1,9 @@
 sudolikeaboss - Now you can too!
 ================================
 
+**WARNING: THIS REPO IS NO LONGER MAINTAINED AND IT NO LONGER WORKS WITH THE CURRENT 1PASSWORD**
 
-.. image:: http://api.flattr.com/button/flattr-badge-large.png
-    :alt: Flattr this git repo!
-    :target: https://flattr.com/submit/auto?user_id=ravenac95&url=http://sudolikeaboss.com&title=sudolikeaboss&description=sudo+like+a+boss+-+now+you+can+too&language=en_GB&tags=sudolikeaboss,passwords,1password&category=software
+
 |
 |
 .. image:: https://raw.githubusercontent.com/ravenac95/readme-images/master/sudolikeaboss/demo.gif
