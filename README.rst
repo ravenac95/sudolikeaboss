@@ -57,8 +57,7 @@ Install with homebrew
 
 ::
 
-    $ brew tap ravenac95/sudolikeaboss
-    $ brew install sudolikeaboss
+    $ brew install ravenac95/sudolikeaboss/sudolikeaboss
 
 
 Install from source
