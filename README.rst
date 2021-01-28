@@ -170,6 +170,13 @@ this, but since I'm using 1password's undocumented API this is how it will be
 right now.
 
 
+Why does the 1password popup not show up?
+*****************************************
+
+You might find that you need to re-register sudolikeaboss with 1password, for
+instance after an upgrade. You can do this by running ``sudolikeaboss register``.
+
+
 I don't use 1password
 *********************
 
